@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,400&display=swap");
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+*,*::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+img {
+    max-width: 100%;
+}
+:root {
+    --white: #fafdfc;
+    --whiteHover: hsl(160 42.9% 98.6% / .2);
+    --gray: rgba(0,0,0,.58);
+    --text: #060c0a;
+    --green: #1e3932;
+    --greenHover: hsla(164, 20%, 59%, 0.2);
+    --lightgreen: #d4e9e2;
+}
+/*elements*/
+.btn{
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  margin:auto;
+  cursor: pointer;
+  width:fit-content;
+}
+
+.btn-outline-green{
+    border:1px solid var(--green);
+    background-color: transparent;
+    color: var(--Green);
+}
+.btn-outline-green:is(:hover, :focus) {
+    border: 1px solid var(--green);
+    background-color: var(--greenHover);
+    color:var(--green);
+}
+.btn-outline-light{
+    border:1px solid var(--white);
+    background-color: transparent;
+    color: var(--white);
+}
+.btn-outline-light:is(:hover, :focus) {
+    border: 1px solid var(--white);
+    background-color: var(--whiteHover);
+    color:var(--white);
+}
+/*Sections*/
+main{
+    display:grid;
+    max-width: 1440px;
+    margin:auto;
+    gap:2rem;
+}
+section{
+    background-color: var(--white);
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    text-align: center;
+    margin:auto;
+}
+section.reverse{
+    flex-wrap:wrap-reverse;
+}
+.section1{
+    background-color:var(--green);
+    color:var(--white);
+}
+.flex-child{
+    display:grid;
+    gap:2rem;
+    padding:2rem;
+}
+@media screen and (min-width: 768px){
+    .flex-child{
+        flex: 1 1 40%;
+    }
+}
+.flex-child-image{
+    padding:0;
+}
+/*headers*/
+.h2{
+    font-weight:800;
+    font-size:clamp(24px, 3vm + 2rem, 32px);
+    letter-spacing: .01em;
+}
